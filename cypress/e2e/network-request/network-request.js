@@ -66,7 +66,7 @@ describe('Network Requests', () => {
 
         cy.wait('@putComment').should(({response}) => {
             console.log(response)
-            expect(response.body.error).to.eq('Unable to find comment!')
+            expect(response.body.error).to.eq(message)
         })
     })
 });
